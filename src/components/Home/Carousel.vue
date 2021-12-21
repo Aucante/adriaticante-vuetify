@@ -1,6 +1,6 @@
 <template>
   <v-carousel
-    height="1000"
+    height="900"
     cycle
     show-arrows-on-hover
     delimiter-icon="mdi-minus"

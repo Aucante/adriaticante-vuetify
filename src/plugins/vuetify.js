@@ -12,6 +12,7 @@ export default new Vuetify({
             primary: colors.blueGrey.lighten5, 
             secondary: colors.blueGrey.darken4, 
             light: colors.blueGrey.lighten4, 
+            font: colors.blueGrey.lighten1
 
           },
         },

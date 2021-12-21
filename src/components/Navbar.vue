@@ -1,7 +1,7 @@
 <template>
   <nav>
     <v-card flat tile>
-      <v-app-bar absolute color="white">
+      <v-app-bar fixed color="white">
         <img :src="logo" height="50" width="250" alt="Adriaticante" />
 
         <v-spacer></v-spacer>
@@ -9,7 +9,7 @@
           <v-tab
             v-for="item in itemsNavigation"
             :key="item.title"
-            class="hidden-sm-and-down font--text"
+            class="hidden-sm-and-down secondary--text"
             router
             :to="{ name: item.link }"
             >{{ item.title }}
@@ -145,11 +145,6 @@ export default {
         },
       ],
     };
-  },
-  computed: {
-    services: function () {
-      return this.$store.getters.services;
-    },
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="blue-grey lighten-4">
+  <v-container fluid class="primary">
     <v-container>
       <p
         class="
@@ -17,7 +17,17 @@
     </v-container>
     <v-container>
       <v-row>
-        <v-col cols="12">
+        <v-col
+          cols="12"
+          sm="10"
+          md="10"
+          lg="8"
+          xl="6"
+          offset-sm="1"
+          offset-md="1"
+          offset-lg="2"
+          offset-xl="3"
+        >
           <div class="my-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
             voluptates esse dolore totam illo repudiandae ea. Explicabo optio
@@ -48,7 +58,7 @@
     <v-container class="d-flex justify-center">
       <v-btn
         depressed
-        color="white secondary--text"
+        color="secondary primary--text"
         class="rounded-0 hidden-sm-and-down"
       >
         Explorer

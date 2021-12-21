@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="my-10">
     <v-container>
       <p
         class="
@@ -19,13 +19,13 @@
       <v-row>
         <v-col
           cols="12"
-          sm="6"
-          md="4"
-          lg="4"
+          sm="8"
+          md="8"
+          lg="6"
           xl="4"
-          offset-sm="3"
-          offset-md="4"
-          offset-lg="4"
+          offset-sm="2"
+          offset-md="2"
+          offset-lg="3"
           offset-xl="4"
         >
           <v-text-field
@@ -57,6 +57,7 @@
         >
           <v-checkbox
             v-model="selected1"
+            @click="selected1 = true"
             color="secondary"
             label="Vous acceptez de recevoir nos derniers articles de blog par email"
             value="John"
@@ -64,6 +65,7 @@
           ></v-checkbox>
           <v-checkbox
             v-model="selected2"
+            @click="selected2 = true"
             color="secondary"
             label="Vous acceptez de recevoir des publicités de nos partenaires"
             value="John"
@@ -73,12 +75,27 @@
       </v-row>
     </v-container>
     <v-container>
-      <p class="caption">
-        Vous affirmez avoir pris connaissance de notre politique de
-        confidentialité. Vous pouvez vous désinscrire à tout moment à l'aide des
-        liens de désinscription ou en nous contactant à l'adresse
-        xxx@adriaticante.com.
-      </p>
+      <v-row>
+        <v-col
+          cols="12"
+          sm="8"
+          md="8"
+          lg="6"
+          xl="4"
+          offset-sm="2"
+          offset-md="2"
+          offset-lg="3"
+          offset-xl="4"
+          class="d-flex justify-center"
+        >
+          <p class="caption font--text">
+            Vous affirmez avoir pris connaissance de notre politique de
+            confidentialité. Vous pouvez vous désinscrire à tout moment à l'aide
+            des liens de désinscription ou en nous contactant à l'adresse
+            xxx@adriaticante.com.
+          </p>
+        </v-col>
+      </v-row>
     </v-container>
     <v-container class="d-flex justify-center">
       <v-btn
@@ -97,8 +114,8 @@
 export default {
   data() {
     return {
-      selected: ["John"],
-      selected2: ["Marie"],
+      selected1: false,
+      selected2: false,
     };
   },
 };
