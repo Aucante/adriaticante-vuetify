@@ -22,9 +22,10 @@
           v-for="card in cards"
           :key="card.id"
           cols="12"
+          sm="12"
           md="6"
-          lg="4"
-          xl="4"
+          lg="6"
+          xl="6"
         >
           <v-card class="mx-auto" max-width="400" tile>
             <v-img class="white--text align-end" height="200px" :src="card.src">
