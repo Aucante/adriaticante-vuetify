@@ -1,6 +1,7 @@
 <template>
   <div id="home">
     <carousel />
+    <discover />
   </div>
 </template>
 
@@ -10,6 +11,7 @@ export default {
 
   components: {
     Carousel: () => import("@/components/Home/Carousel"),
+    Discover: () => import("@/components/Home/Discover"),
   },
 };
 </script>
