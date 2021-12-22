@@ -16,42 +16,60 @@
       <v-divider></v-divider>
     </v-container>
     <v-container>
-      <v-row>
+      <v-row class="my-10">
         <v-col
           cols="12"
           sm="10"
           md="10"
-          lg="8"
+          lg="10"
           xl="6"
           offset-sm="1"
           offset-md="1"
-          offset-lg="2"
+          offset-lg="1"
           offset-xl="3"
         >
-          <div class="my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            voluptates esse dolore totam illo repudiandae ea. Explicabo optio
-            pariatur asperiores porro, neque iusto? Quisquam ab culpa fugiat
-            minima a tempore.
-          </div>
-          <div class="my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            voluptates esse dolore totam illo repudiandae ea. Explicabo optio
-            pariatur asperiores porro, neque iusto? Quisquam ab culpa fugiat
-            minima a tempore.
-          </div>
-          <div class="my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            voluptates esse dolore totam illo repudiandae ea. Explicabo optio
-            pariatur asperiores porro, neque iusto? Quisquam ab culpa fugiat
-            minima a tempore.
-          </div>
-          <div class="my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            voluptates esse dolore totam illo repudiandae ea. Explicabo optio
-            pariatur asperiores porro, neque iusto? Quisquam ab culpa fugiat
-            minima a tempore.
-          </div>
+          <v-row>
+            <v-col cols="6" class="d-flex justify-center">
+              <v-icon size="170" color="secondary"
+                >mdi-office-building-marker-outline</v-icon
+              >
+            </v-col>
+            <v-col cols="6" class="d-flex justify-center align-center">
+              <p class="text-h5 font-weight-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur esse, cupiditate facilis neque velit possimus sint
+                unde earum, eaque incidunt exercitationem, vero eum? Atque
+                voluptas facere ipsa vel. Magni, similique.
+              </p>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+      <v-row class="my-10">
+        <v-col
+          cols="12"
+          sm="10"
+          md="10"
+          lg="10"
+          xl="6"
+          offset-sm="1"
+          offset-md="1"
+          offset-lg="1"
+          offset-xl="3"
+        >
+          <v-row>
+            <v-col cols="6" class="d-flex justify-center align-center">
+              <p class="text-h5 font-weight-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur esse, cupiditate facilis neque velit possimus sint
+                unde earum, eaque incidunt exercitationem, vero eum? Atque
+                voluptas facere ipsa vel. Magni, similique.
+              </p>
+            </v-col>
+            <v-col cols="6" class="d-flex justify-center">
+              <v-icon size="170" color="secondary">mdi-drone</v-icon>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-container>

@@ -1,10 +1,11 @@
 <template>
   <div id="home">
-    <carousel />
-    <discover />
+    <navbar-container />
+    <contact />
     <gradient-top />
-    <explorer />
+    <contact-form />
     <gradient-bottom />
+    <contact-details />
     <newsletter />
     <footer-app />
   </div>
@@ -16,11 +17,12 @@ export default {
   name: "Home",
 
   components: {
-    Carousel: () => import("@/components/Home/Carousel"),
-    Discover: () => import("@/components/Home/Discover"),
+    NavbarContainer: () => import("@/components/NavbarContainer"),
+    Contact: () => import("@/components/Contact/Contact"),
     GradientTop: () => import("@/components/Home/GradientTop"),
-    Explorer: () => import("@/components/Home/Explorer"),
+    ContactForm: () => import("@/components/Contact/ContactForm"),
     GradientBottom: () => import("@/components/Home/GradientBottom"),
+    ContactDetails: () => import("@/components/Contact/ContactDetails"),
     Newsletter: () => import("@/components/Newsletter/Newsletter"),
     FooterApp,
   },
