@@ -18,12 +18,13 @@
             outlined
           >
             <v-icon
+              data-aos="fade-right"
               color="secondary"
               size="110"
               class="d-flex justify-center mb-4"
               >{{ contact.icon }}</v-icon
             >
-            <div class="mt-7">
+            <div data-aos="fade-left" class="mt-7">
               <p class="d-flex justify-center title font-weight-light">
                 {{ contact.content }}
               </p>

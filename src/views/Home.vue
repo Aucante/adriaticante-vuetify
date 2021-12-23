@@ -18,9 +18,9 @@ export default {
   components: {
     Carousel: () => import("@/components/Home/Carousel"),
     Discover: () => import("@/components/Home/Discover"),
-    GradientTop: () => import("@/components/Home/GradientTop"),
+    GradientTop: () => import("@/components/Gradient/GradientPrimaryTop"),
     Explorer: () => import("@/components/Home/Explorer"),
-    GradientBottom: () => import("@/components/Home/GradientBottom"),
+    GradientBottom: () => import("@/components/Gradient/GradientPrimaryBottom"),
     Newsletter: () => import("@/components/Newsletter/Newsletter"),
     FooterApp,
   },

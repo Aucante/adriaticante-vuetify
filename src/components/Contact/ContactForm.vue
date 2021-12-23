@@ -14,33 +14,34 @@
           offset-xl="2"
         >
           <v-row>
-            <v-col cols="6" sm="4" md="4" lg="4" xl="4">
+            <v-col cols="6" sm="6" md="4" lg="4" xl="4">
               <v-text-field label="First Name"></v-text-field>
             </v-col>
-            <v-col cols="6" sm="4" md="4" lg="4" xl="4">
+            <v-col cols="6" sm="6" md="4" lg="4" xl="4">
               <v-text-field label="Last Name"></v-text-field>
             </v-col>
           </v-row>
           <v-row>
-            <v-col cols="6" sm="4" md="4" lg="4" xl="4">
+            <v-col cols="6" sm="6" md="4" lg="4" xl="4">
               <v-text-field label="Email"></v-text-field>
             </v-col>
-            <v-col cols="6" sm="4" md="4" lg="4" xl="4">
+            <v-col cols="6" sm="6" md="4" lg="4" xl="4">
               <v-text-field label="Phone"></v-text-field>
             </v-col>
           </v-row>
           <v-row>
-            <v-col cols="12" sm="8" md="8" lg="8" xl="8">
-              <v-text-field
+            <v-col cols="12" sm="12" md="8" lg="8" xl="8">
+              <v-textarea
                 label="Message"
                 color="secondary"
                 append-icon="mdi-message"
                 clearable
-              ></v-text-field>
+                clear-icon="mdi-close-circle"
+              ></v-textarea>
             </v-col>
             <v-col
               cols="12"
-              sm="4"
+              sm="12"
               md="4"
               lg="4"
               xl="4"
@@ -49,7 +50,7 @@
               <v-btn
                 color="secondary primary--text"
                 class="font-weight-light rounded-0"
-                width="280"
+                width="200"
                 height="48"
               >
                 Send

@@ -2,10 +2,16 @@
   <nav>
     <v-card flat tile>
       <v-app-bar fixed color="white">
-        <img :src="logo" height="50" width="250" alt="Adriaticante" />
+        <router-link to="/"
+          ><img :src="logo" height="40" width="180" alt="Adriaticante"
+        /></router-link>
 
         <v-spacer></v-spacer>
-        <v-tabs align-with-title class="d-flex justify-end" :color="'font'">
+        <v-tabs
+          align-with-title
+          class="d-flex justify-end mr-5"
+          :color="'font'"
+        >
           <v-tab
             v-for="item in itemsNavigation"
             :key="item.title"
@@ -18,7 +24,7 @@
         <v-btn
           depressed
           color="secondary primary--text"
-          class="font-weight-light rounded-0 hidden-sm-and-down"
+          class="font-weight-light rounded-0 hidden-sm-and-down mr-5"
         >
           Sign Up
         </v-btn>
@@ -128,13 +134,13 @@ export default {
         {
           title: "Properties",
           icon: "mdi-account",
-          link: "About",
+          link: "Properties",
           list: false,
         },
         {
           title: "About us",
           icon: "mdi-folder-multiple",
-          link: "Achievements",
+          link: "About",
           list: false,
         },
         {

@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="my-10">
+  <v-container data-aos="fade-down" fluid class="my-10">
     <v-container>
       <p
         class="
@@ -59,7 +59,7 @@
             v-model="selected1"
             @click="selected1 = true"
             color="secondary"
-            label="Vous acceptez de recevoir nos derniers articles de blog par email"
+            label="You agree to receive our latest blog posts by email"
             value="John"
             class="my-n5"
           ></v-checkbox>
@@ -67,7 +67,7 @@
             v-model="selected2"
             @click="selected2 = true"
             color="secondary"
-            label="Vous acceptez de recevoir des publicités de nos partenaires"
+            label="You agree to receive advertisements from our partners"
             value="John"
             class="my-n5"
           ></v-checkbox>
@@ -89,10 +89,9 @@
           class="d-flex justify-center"
         >
           <p class="caption font--text">
-            Vous affirmez avoir pris connaissance de notre politique de
-            confidentialité. Vous pouvez vous désinscrire à tout moment à l'aide
-            des liens de désinscription ou en nous contactant à l'adresse
-            xxx@adriaticante.com.
+            You confirm that you have read our policy of confidentiality. You
+            can unsubscribe at any time using unsubscribe links or by contacting
+            us at xxx@adriaticante.com.
           </p>
         </v-col>
       </v-row>
