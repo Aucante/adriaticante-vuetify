@@ -9,32 +9,37 @@
           md="4"
           lg="4"
           xl="4"
-          class="d-flex justify-center"
+          class="d-flex align-center justify-center"
         >
-          <v-container
+          <v-card
             data-aos="fade-right"
-            class="justify-center px-5"
-            color="primary"
+            class="d-flex align-center px-5"
+            color="transparent"
+            height="700"
             width="400"
             outlined
           >
             <div>
-              <p class="d-flex justify-center text-h4 font-weight-light">
-                {{ skill.title }}
-              </p>
+              <div>
+                <p
+                  class="d-flex justify-center text-h3 font-weight-light my-10"
+                >
+                  {{ skill.title }}
+                </p>
+              </div>
+              <v-icon
+                color="secondary"
+                size="70"
+                class="d-flex justify-center my-10"
+                >{{ skill.icon }}</v-icon
+              >
+              <div class="mt-7">
+                <p class="d-flex justify-center title font-weight-light">
+                  {{ skill.content }}
+                </p>
+              </div>
             </div>
-            <v-icon
-              color="secondary"
-              size="50"
-              class="d-flex justify-center mb-4"
-              >{{ skill.icon }}</v-icon
-            >
-            <div class="mt-7">
-              <p class="d-flex justify-center title font-weight-light">
-                {{ skill.content }}
-              </p>
-            </div>
-          </v-container>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>

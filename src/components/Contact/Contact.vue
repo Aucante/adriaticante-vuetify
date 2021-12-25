@@ -3,7 +3,7 @@
     <v-row>
       <v-col
         cols="12"
-        sm="12"
+        sm="10"
         md="10"
         lg="10"
         xl="10"
@@ -21,37 +21,44 @@
             xl="4"
             class="d-flex align-center"
           >
-            <div>
-              <div class="display-2 font-weight-light secondary--text my-10">
-                CONTACT US
+            <v-card
+              color="transparent"
+              class="d-flex align-center"
+              height="500"
+              outlined
+            >
+              <div>
+                <div class="display-2 font-weight-light secondary--text my-10">
+                  CONTACT US
+                </div>
+                <p class="text-h6 font-weight-light secondary--text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+                  consequatur tenetur architecto distinctio quis corporis
+                  cupiditate fugit minus, placeat impedit, eaque exercitationem
+                  hic maxime temporibus et qui, quo repellat quia!
+                </p>
               </div>
-              <p class="font-weight-light secondary--text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-                consequatur tenetur architecto distinctio quis corporis
-                cupiditate fugit minus, placeat impedit, eaque exercitationem
-                hic maxime temporibus et qui, quo repellat quia!
-              </p>
-            </div>
+            </v-card>
           </v-col>
           <v-col
             cols="12"
-            sm="4"
-            md="4"
-            lg="4"
-            xl="4"
-            offset-sm="4"
-            offset-md="4"
-            offset-lg="4"
-            offset-xl="4"
+            sm="12"
+            md="5"
+            lg="5"
+            xl="5"
+            offset-md="3"
+            offset-lg="3"
+            offset-xl="3"
             class="d-flex align-center"
           >
-            <v-img
-              class="white--text align-end"
-              height="200px"
-              :src="picture"
-              gradient="to top right, rgba(100,115,201,.1), rgba(0,0,0,.7)"
-            >
-            </v-img>
+            <v-card class="d-flex align-center" tile>
+              <v-img
+                height="400"
+                :src="picture"
+                gradient="to top right, rgba(100,115,201,.1), rgba(0,0,0,.7)"
+              >
+              </v-img>
+            </v-card>
           </v-col>
         </v-row>
       </v-col>

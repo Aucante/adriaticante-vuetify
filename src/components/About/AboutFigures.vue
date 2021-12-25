@@ -10,13 +10,19 @@
         lg="3"
         xl="3"
       >
-        <v-container data-aos="flip-up" class="d-flex justify-center">
+        <v-card
+          data-aos="flip-up"
+          class="d-flex align-center justify-center"
+          color="transparent"
+          height="400"
+          outlined
+        >
           <div>
             <div
               class="
                 d-flex
                 justify-center
-                display-3
+                display-4
                 white--text
                 font-weight-thin
                 mb-10
@@ -29,7 +35,7 @@
               class="
                 d-flex
                 justify-center
-                display-1
+                display-2
                 white--text
                 font-weight-thin
                 mt-10
@@ -38,7 +44,7 @@
               {{ asset.content }}
             </div>
           </div>
-        </v-container>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
