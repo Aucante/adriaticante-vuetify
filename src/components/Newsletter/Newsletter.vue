@@ -118,13 +118,3 @@
 </template>
 
 
-<script>
-export default {
-  data() {
-    return {
-      selected1: false,
-      selected2: false,
-    };
-  },
-};
-</script>

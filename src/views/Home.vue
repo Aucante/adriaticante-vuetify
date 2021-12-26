@@ -7,7 +7,7 @@
     <gradient-top />
     <explorer />
     <gradient-bottom />
-    <newsletter />
+    <newsletter-form />
     <footer-app />
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
     GradientTop: () => import("@/components/Gradient/GradientPrimaryTop"),
     Explorer: () => import("@/components/Home/Explorer"),
     GradientBottom: () => import("@/components/Gradient/GradientPrimaryBottom"),
-    Newsletter: () => import("@/components/Newsletter/Newsletter"),
+    NewsletterForm: () => import("@/components/Newsletter/NewsletterForm"),
     FooterApp,
   },
 };

@@ -12,7 +12,6 @@
           class="d-flex align-center justify-center"
         >
           <v-card
-            data-aos="fade-right"
             class="d-flex align-center px-5"
             color="transparent"
             height="700"
@@ -20,7 +19,7 @@
             outlined
           >
             <div>
-              <div>
+              <div data-aos="fade-right">
                 <p
                   class="d-flex justify-center text-h3 font-weight-light my-10"
                 >
@@ -28,12 +27,13 @@
                 </p>
               </div>
               <v-icon
+                data-aos="fade-right"
                 color="secondary"
                 size="70"
                 class="d-flex justify-center my-10"
                 >{{ skill.icon }}</v-icon
               >
-              <div class="mt-7">
+              <div data-aos="fade-left" class="mt-7">
                 <p class="d-flex justify-center title font-weight-light">
                   {{ skill.content }}
                 </p>

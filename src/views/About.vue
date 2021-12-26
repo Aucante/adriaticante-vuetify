@@ -5,7 +5,7 @@
     <about-description />
     <about-skill />
     <about-figures />
-    <newsletter />
+    <newsletter-form />
     <footer-app />
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
     AboutDescription: () => import("@/components/About/AboutDescription"),
     AboutSkill: () => import("@/components/About/AboutSkill"),
     AboutFigures: () => import("@/components/About/AboutFigures"),
-    Newsletter: () => import("@/components/Newsletter/Newsletter"),
+    NewsletterForm: () => import("@/components/Newsletter/NewsletterForm"),
     FooterApp,
   },
 };

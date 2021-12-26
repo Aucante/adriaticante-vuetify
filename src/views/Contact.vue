@@ -6,7 +6,7 @@
     <contact-form />
     <gradient-bottom />
     <contact-details />
-    <newsletter />
+    <newsletter-form />
     <footer-app />
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
     ContactForm: () => import("@/components/Contact/ContactForm"),
     GradientBottom: () => import("@/components/Home/GradientBottom"),
     ContactDetails: () => import("@/components/Contact/ContactDetails"),
-    Newsletter: () => import("@/components/Newsletter/Newsletter"),
+    NewsletterForm: () => import("@/components/Newsletter/NewsletterForm"),
     FooterApp,
   },
 };
