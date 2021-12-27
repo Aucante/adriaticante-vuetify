@@ -26,7 +26,7 @@
           color="secondary primary--text"
           class="font-weight-light rounded-0 hidden-sm-and-down mr-5"
         >
-          Sign Up
+          {{ btn }}
         </v-btn>
 
         <v-icon
@@ -34,25 +34,27 @@
           color="secondary"
           class="ml-3"
           @click="drawer = !drawer"
-          >mdi-sort-variant</v-icon
+          >{{ mdiMenu }}</v-icon
         >
       </v-app-bar>
     </v-card>
     <v-navigation-drawer v-model="drawer" app width="320">
       <v-list dense class="display-2">
         <v-container class="d-flex justify-center">
-          <img
-            :src="logo"
-            alt="Adriaticante"
-            height="50"
-            class="d-flex justify-center"
-          />
+          <router-link to="/">
+            <img
+              :src="logo"
+              alt="Adriaticante"
+              height="50"
+              class="d-flex justify-center"
+            />
+          </router-link>
           <v-icon
             size="35"
             color="secondary"
             class="ml-3"
             @click="drawer = !drawer"
-            >mdi-sort-variant</v-icon
+            >{{ mdiMenu }}</v-icon
           >
         </v-container>
         <v-container class="d-flex justify-center">
@@ -61,7 +63,7 @@
             class="rounded-0 font-weight-light"
             elevation="5"
           >
-            Sign Up
+            {{ btn }}
           </v-btn>
         </v-container>
         <v-divider></v-divider>
@@ -126,10 +128,12 @@ export default {
   name: "Navbar",
   data() {
     return {
-      title: "JoyceDesignInterieur",
+      title: "Adriaticante",
       drawer: false,
       selectedItem: 1,
       logo: logo,
+      btn: "Sign In",
+      mdiMenu: "mdi-sort-variant",
       itemsNavigation: [
         {
           title: "Properties",

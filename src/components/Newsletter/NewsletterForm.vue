@@ -18,7 +18,7 @@
               font-weight-light
             "
           >
-            NEWSLETTER
+            {{ title }}
           </p>
           <v-divider></v-divider>
         </v-container>
@@ -95,7 +95,7 @@
 
                         <v-scroll-x-transition>
                           <v-icon v-if="task.done" color="success">
-                            mdi-check
+                            {{ mdi }}
                           </v-icon>
                         </v-scroll-x-transition>
                       </v-list-item>
@@ -121,16 +121,19 @@
               class="d-flex justify-center"
             >
               <p class="caption font--text">
-                You confirm that you have read our policy of confidentiality.
-                You can unsubscribe at any time using unsubscribe links or by
-                contacting us at xxx@adriaticante.com.
+                {{ policyOfConfidentiality }}
               </p>
             </v-col>
           </v-row>
         </v-container>
         <v-container v-if="completedTasks" class="d-flex justify-center">
-          <v-btn depressed color="secondary white--text" class="rounded-0">
-            Sign up
+          <v-btn
+            data-aos="fade-up"
+            depressed
+            color="secondary white--text"
+            class="rounded-0"
+          >
+            {{ btn }}
           </v-btn>
         </v-container>
       </v-container>
@@ -142,6 +145,11 @@
 <script>
 export default {
   data: () => ({
+    title: "NEWSLETTER",
+    btn: "Sign up",
+    policyOfConfidentiality:
+      "You confirm that you have read our policy of confidentiality. You can unsubscribe at any time using unsubscribe links or by contacting us at xxx@adriaticante.com.",
+    mdi: "mdi-check",
     tasks: [
       {
         done: false,
