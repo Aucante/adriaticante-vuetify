@@ -49,34 +49,12 @@
 <script>
 export default {
   data() {
-    return {
-      skills: [
-        {
-          id: 1,
-          title: "Expertise",
-          icon: "mdi-hexagon-slice-2",
-          content:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea vel necessitatibus nesciunt suscipit provident natus asperiores laudantium, adipisci perspiciatis laboriosam neque sed odiorecusandae autem obcaecati placeat dolore. Nihil, commodi.",
-          divider: true,
-        },
-        {
-          id: 2,
-          title: "Development",
-          icon: "mdi-cylinder",
-          content:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea vel necessitatibus nesciunt suscipit provident natus asperiores laudantium, adipisci perspiciatis laboriosam neque sed odiorecusandae autem obcaecati placeat dolore. Nihil, commodi.",
-          divider: true,
-        },
-        {
-          id: 3,
-          title: "Production",
-          icon: "mdi-battery-10",
-          content:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea vel necessitatibus nesciunt suscipit provident natus asperiores laudantium, adipisci perspiciatis laboriosam neque sed odiorecusandae autem obcaecati placeat dolore. Nihil, commodi.",
-          divider: true,
-        },
-      ],
-    };
+    return {};
+  },
+  computed: {
+    skills() {
+      return this.$store.getters.getSkills;
+    },
   },
 };
 </script>

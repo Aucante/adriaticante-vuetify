@@ -53,30 +53,12 @@
 <script>
 export default {
   data() {
-    return {
-      assets: [
-        {
-          id: 1,
-          figure: 4,
-          content: "Countries",
-        },
-        {
-          id: 2,
-          figure: 17,
-          content: "Cities",
-        },
-        {
-          id: 3,
-          figure: 82,
-          content: "Projects",
-        },
-        {
-          id: 4,
-          figure: 10,
-          content: "Years",
-        },
-      ],
-    };
+    return {};
+  },
+  computed: {
+    assets() {
+      return this.$store.getters.getAssets;
+    },
   },
 };
 </script>

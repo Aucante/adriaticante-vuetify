@@ -14,7 +14,7 @@
             <v-img
               class="white--text align-end"
               height="400"
-              :src="picture"
+              :src="description.picture"
               gradient="to top right, rgba(100,115,201,.1), rgba(0,0,0,.7)"
             >
             </v-img>
@@ -37,30 +37,14 @@
             outlined
           >
             <div>
-              <div class="display-1 font-weight-light mb-5">OUR HERITAGE</div>
+              <div class="display-1 font-weight-light mb-5">
+                {{ description.title }}
+              </div>
               <p class="subtitle font-weight-light">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea vel
-                necessitatibus nesciunt suscipit provident natus asperiores
-                laudantium, adipisci perspiciatis laboriosam neque sed odio
-                recusandae autem obcaecati placeat dolore. Nihil, commodi. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-                dolorem pariatur nulla harum dolorum veritatis corrupti
-                voluptatibus atque soluta, delectus suscipit numquam, fugiat
-                ipsa placeat obcaecati nesciunt neque sint itaque? Lorem ipsum
-                dolor, sit amet consectetur adipisicing elit. Autem nulla,
-                adipisci dolorem tempore nam quas eius ipsam blanditiis
-                accusamus saepe nostrum cum obcaecati vitae esse, accusantium
-                veritatis facilis totam quae.
+                {{ description.content1 }}
               </p>
               <p class="subtitle font-weight-bold secondary--text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea vel
-                necessitatibus nesciunt suscipit provident natus asperiores
-                laudantium, adipisci perspiciatis laboriosam neque sed odio
-                recusandae autem obcaecati placeat dolore. Nihil, commodi. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-                dolorem pariatur nulla harum dolorum veritatis corrupti
-                voluptatibus atque soluta, delectus suscipit numquam, fugiat
-                ipsa placeat obcaecati nesciunt neque sint itaque?
+                {{ description.content2 }}
               </p>
             </div>
           </v-card>
@@ -74,7 +58,14 @@
 export default {
   data() {
     return {
-      picture: require("./../../assets/image/adriatic1.jpg"),
+      description: {
+        title: "OUR HERITAGE",
+        content1:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea velnecessitatibus nesciunt suscipit provident natus asperioreslaudantium, adipisci perspiciatis laboriosam neque sed odiorecusandae autem obcaecati placeat dolore. Nihil, commodi. Loremipsum dolor sit amet consectetur adipisicing elit. Deseruntdolorem pariatur nulla harum dolorum veritatis corruptivoluptatibus atque soluta, delectus suscipit numquam, fugiatipsa placeat obcaecati nesciunt neque sint itaque? Lorem ipsumdolor, sit amet consectetur adipisicing elit. Autem nulla,adipisci dolorem tempore nam quas eius ipsam blanditiisaccusamus saepe nostrum cum obcaecati vitae esse, accusantium",
+        content2:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea velnecessitatibus nesciunt suscipit provident natus asperioreslaudantium, adipisci perspiciatis laboriosam neque sed odiorecusandae autem obcaecati placeat dolore. Nihil, commodi. Loremipsum dolor sit amet consectetur adipisicing elit. Deseruntdolorem pariatur nulla harum dolorum veritatis corruptivoluptatibus atque soluta, delectus suscipit numquam, fugiatipsa placeat obcaecati nesciunt neque sint itaque? Lorem ipsumdolor, sit amet consectetur adipisicing elit. Autem nulla,adipisci dolorem tempore nam quas eius ipsam blanditiisaccusamus saepe nostrum cum obcaecati vitae esse, accusantium",
+        picture: require("./../../assets/image/adriatic1.jpg"),
+      },
     };
   },
 };

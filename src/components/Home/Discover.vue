@@ -100,33 +100,12 @@ export default {
     return {
       title: "DISCOVER",
       btn: "Discover",
-      cards: [
-        {
-          id: 1,
-          city: "Dubrovnik",
-          country: "Croatia",
-          src: require("./../../assets/image/dubrovnik1.jpg"),
-        },
-        {
-          id: 2,
-          city: "Ljubljana",
-          country: "Slovenia",
-          src: require("./../../assets/image/ljubljana1.jpg"),
-        },
-        {
-          id: 3,
-          city: "Roma",
-          country: "Italy",
-          src: require("./../../assets/image/roma1.jpg"),
-        },
-        {
-          id: 4,
-          city: "Kotor",
-          country: "Montenegro",
-          src: require("./../../assets/image/kotor1.jpg"),
-        },
-      ],
     };
+  },
+  computed: {
+    cards() {
+      return this.$store.getters.getCards;
+    },
   },
 };
 </script>

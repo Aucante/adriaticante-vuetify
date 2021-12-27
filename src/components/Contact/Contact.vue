@@ -29,13 +29,10 @@
             >
               <div>
                 <div class="display-2 font-weight-light secondary--text my-10">
-                  CONTACT US
+                  {{ contact.title }}
                 </div>
                 <p class="text-h6 font-weight-light secondary--text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-                  consequatur tenetur architecto distinctio quis corporis
-                  cupiditate fugit minus, placeat impedit, eaque exercitationem
-                  hic maxime temporibus et qui, quo repellat quia!
+                  {{ contact.content }}
                 </p>
               </div>
             </v-card>
@@ -54,7 +51,7 @@
             <v-card class="d-flex align-center" tile>
               <v-img
                 height="400"
-                :src="picture"
+                :src="contact.picture"
                 gradient="to top right, rgba(100,115,201,.1), rgba(0,0,0,.7)"
               >
               </v-img>
@@ -70,7 +67,12 @@
 export default {
   data() {
     return {
-      picture: require("./../../assets/image/contact.jpg"),
+      contact: {
+        title: "CONTACT US",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est consequatur tenetur architecto distinctio quis corporis cupiditate fugit minus, placeat impedit, eaque exercitationem hic maxime temporibus et qui, quo repellat quia!",
+        picture: require("./../../assets/image/contact.jpg"),
+      },
     };
   },
 };

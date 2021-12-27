@@ -51,28 +51,12 @@
 <script>
 export default {
   data() {
-    return {
-      contacts: [
-        {
-          id: 1,
-          icon: "mdi-email",
-          content: "adriaticante@adriaticante.com",
-          divider: true,
-        },
-        {
-          id: 2,
-          icon: "mdi-cellphone",
-          content: "+33449911775",
-          divider: true,
-        },
-        {
-          id: 3,
-          icon: "mdi-map-marker-outline",
-          content: "Trieste ITALY",
-          divider: false,
-        },
-      ],
-    };
+    return {};
+  },
+  computed: {
+    contacts() {
+      return this.$store.getters.getContacts;
+    },
   },
 };
 </script>
