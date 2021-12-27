@@ -12,14 +12,34 @@
           class="d-flex justify-end mr-5"
           :color="'font'"
         >
-          <v-tab
+          <v-menu
             v-for="item in itemsNavigation"
             :key="item.title"
-            class="hidden-sm-and-down secondary--text"
-            router
-            :to="{ name: item.link }"
-            >{{ item.title }}
-          </v-tab>
+            offset-y
+            tile
+            nudge-width="100"
+          >
+            <template v-slot:activator="{ on }">
+              <v-tab
+                v-on="on"
+                class="hidden-sm-and-down secondary--text"
+                router
+                :to="{ name: item.link }"
+                >{{ item.title }}
+              </v-tab>
+            </template>
+            <v-list>
+              <!-- v-list-tile is changed to v-list-item -->
+              <v-list-item
+                v-for="(dropdown, i) in item.dropdowns"
+                :key="i"
+                router
+                :to="dropdown.link"
+              >
+                <v-list-item-title>{{ dropdown.name }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
         </v-tabs>
         <v-btn
           depressed
@@ -136,22 +156,55 @@ export default {
       mdiMenu: "mdi-sort-variant",
       itemsNavigation: [
         {
-          title: "Properties",
-          icon: "mdi-account",
-          link: "Properties",
+          title: "Real Estate",
+          icon: "mdi-office-building-marker-outline",
+          dropdowns: [
+            {
+              name: "Apartments",
+              link: "Properties",
+            },
+            {
+              name: "New Building",
+              link: "Properties",
+            },
+            {
+              name: "Houses",
+              link: "Properties",
+            },
+            {
+              name: "Villas",
+              link: "Properties",
+            },
+            {
+              name: "Plots",
+              link: "Properties",
+            },
+          ],
           list: false,
         },
         {
           title: "About us",
-          icon: "mdi-folder-multiple",
-          link: "About",
+          icon: "mdi-account",
+          link: "",
           list: false,
+          dropdowns: [
+            {
+              name: "About Us",
+              link: "About",
+            },
+          ],
         },
         {
           title: "Contact",
           icon: "mdi-contacts",
-          link: "Contact",
+          link: "",
           list: false,
+          dropdowns: [
+            {
+              name: "Contact",
+              link: "Contact",
+            },
+          ],
         },
       ],
     };

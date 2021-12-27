@@ -89,7 +89,7 @@
           <v-row>
             <v-col cols="6" class="d-flex justify-center">
               <v-icon data-aos="fade-right" size="170" color="secondary"
-                >mdi-office-building-marker-outline</v-icon
+                >mdi-video-check-outline</v-icon
               >
             </v-col>
             <v-col cols="6" class="d-flex justify-center align-center">

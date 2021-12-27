@@ -63,7 +63,7 @@
                     d-flex
                     justify-center
                     medium--text
-                    text-h4
+                    text-h5
                     font-weight-light
                   "
                 >
@@ -104,7 +104,7 @@ export default {
 <style scoped>
 .subtitle {
   background-color: rgba(0, 0, 0, 0.7);
-  height: 100px;
+  height: 90px;
 }
 </style>
 

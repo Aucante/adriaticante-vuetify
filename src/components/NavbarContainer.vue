@@ -4,6 +4,6 @@
 
 <style scoped>
 .height {
-  height: 80px;
+  height: 55px;
 }
 </style>
