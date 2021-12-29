@@ -6,6 +6,7 @@
     <explorer />
     <gradient-bottom />
     <carousel-properties-last />
+    <home-other-properties />
     <home-contact />
     <home-about />
     <newsletter-form />
@@ -25,6 +26,7 @@ export default {
     Explorer: () => import("@/components/Home/Explorer"),
     CarouselPropertiesLast: () =>
       import("@/components/Carousel/CarouselPropertiesLast"),
+    HomeOtherProperties: () => import("@/components/Home/HomeOtherProperties"),
     HomeContact: () => import("@/components/Home/HomeContact"),
     HomeAbout: () => import("@/components/Home/HomeAbout"),
     GradientBottom: () => import("@/components/Gradient/GradientPrimaryBottom"),

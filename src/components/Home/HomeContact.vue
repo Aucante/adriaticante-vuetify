@@ -20,7 +20,7 @@
             gradient="to top right, rgba(0,0,0,.7), rgba(0,0,0,.7)"
           >
             <v-row>
-              <v-col cols="8" offset="2">
+              <v-col cols="12">
                 <v-container>
                   <div class="d-flex justify-center">
                     <p class="text-h6 font-weight-light">{{ subtitle }}</p>

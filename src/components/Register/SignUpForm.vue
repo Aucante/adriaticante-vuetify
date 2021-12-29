@@ -20,7 +20,15 @@
         <v-card ref="form" tile>
           <v-card-text>
             <v-text-field
-              ref="name"
+              ref="email"
+              v-model="email"
+              :rules="[() => !!email || 'This field is required']"
+              :error-messages="errorMessages"
+              label="Email"
+              required
+            ></v-text-field>
+            <v-text-field
+              ref="lastName"
               v-model="lastName"
               :rules="[() => !!lastName || 'This field is required']"
               :error-messages="errorMessages"
@@ -28,7 +36,7 @@
               required
             ></v-text-field>
             <v-text-field
-              ref="name"
+              ref="firstName"
               v-model="firstName"
               :rules="[() => !!firstName || 'This field is required']"
               :error-messages="errorMessages"
@@ -79,6 +87,16 @@
               placeholder="Select..."
               required
             ></v-autocomplete>
+            <v-text-field
+              v-model="password"
+              :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+              :rulesPassword="[rulesPassword.required, rulesPassword.min]"
+              :type="showPassword ? 'text' : 'password'"
+              name="input-10-1"
+              hint="At least 8 characters"
+              required
+              @click:append="showPassword = !showPassword"
+            ></v-text-field>
           </v-card-text>
           <v-divider class="mt-12"></v-divider>
           <v-card-actions>
@@ -119,6 +137,11 @@
 export default {
   data: () => ({
     logo: require("./../../assets/logo/adriaticante.png"),
+    showPassword: false,
+    rulesPassword: {
+      required: (value) => !!value || "Required.",
+      min: (v) => v.length >= 8 || "Min 8 characters",
+    },
     countries: [
       "Afghanistan",
       "Albania",
@@ -328,6 +351,7 @@ export default {
       "Zimbabwe",
     ],
     errorMessages: "",
+    email: null,
     firstName: null,
     lastName: null,
     address: null,
@@ -335,12 +359,14 @@ export default {
     state: null,
     zip: null,
     country: null,
+    password: null,
     formHasErrors: false,
   }),
 
   computed: {
     form() {
       return {
+        email: this.email,
         lastName: this.lastName,
         firstName: this.firstName,
         address: this.address,
@@ -348,6 +374,7 @@ export default {
         state: this.state,
         zip: this.zip,
         country: this.country,
+        password: this.password,
       };
     },
   },

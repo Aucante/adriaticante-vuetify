@@ -71,7 +71,7 @@
                         </div>
                         <div class="d-flex justify-start">
                           <p class="text-h5 font-weight-light">
-                            {{ property.price }}$
+                            {{ property.price }}
                           </p>
                         </div>
                         <div class="d-flex justify-center">
