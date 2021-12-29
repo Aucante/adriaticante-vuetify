@@ -22,7 +22,7 @@ export default new Vuex.Store({
         id: 3,
         city: "Roma",
         country: "Italy",
-        src: require("./../assets/image/roma1.jpg"),
+        src: require("./../assets/image/italy1.jpg"),
       },
       {
         id: 4,

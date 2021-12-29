@@ -2,13 +2,7 @@
   <v-container fluid>
     <v-row>
       <v-col cols="12" lg="8" xl="6" offset-lg="2" offset-xl="3">
-        <v-card
-          color="transparent"
-          class="d-flex align-center"
-          height="900"
-          outlined
-          tile
-        >
+        <v-card color="transparent" class="d-flex align-center" outlined tile>
           <v-container>
             <v-container class="my-5">
               <p

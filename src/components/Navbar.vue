@@ -45,6 +45,8 @@
           depressed
           color="secondary primary--text"
           class="font-weight-light rounded-0 hidden-sm-and-down mr-5"
+          router
+          :to="'SignIn'"
         >
           {{ btn }}
         </v-btn>
@@ -58,7 +60,10 @@
         >
       </v-app-bar>
     </v-card>
-    <v-navigation-drawer v-model="drawer" app width="320">
+
+    <!-- Navigation Drawer -->
+
+    <v-navigation-drawer v-model="drawer" app width="410">
       <v-list dense class="display-2">
         <v-container class="d-flex justify-center">
           <router-link to="/">
@@ -88,49 +93,33 @@
         </v-container>
         <v-divider></v-divider>
 
-        <v-list
-          v-for="item in itemsNavigation"
-          :key="item.title"
-          router
-          :to="{ name: item.link }"
-        >
-          <v-list-item
-            v-if="item.list == false"
-            router
-            :to="{ name: item.link }"
+        <!-- List Item -->
+
+        <v-list>
+          <v-list-group
+            v-for="(item, i) in itemsNavigation"
+            :key="i"
+            :prepend-icon="item.icon"
+            color="secondary"
           >
-            <v-list-item-icon>
-              <v-icon color="icon" v-text="item.icon"></v-icon>
-            </v-list-item-icon>
-
-            <v-list-item-title class="font--text" v-text="item.title">
-            </v-list-item-title>
-          </v-list-item>
-
-          <v-list-group v-if="item.list == true" color="light" :value="false">
             <template v-slot:activator>
-              <v-list-item-icon>
-                <v-icon color="icon" v-text="item.icon"></v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="font--text" v-text="item.title">
-              </v-list-item-title>
+              <v-list-item-content>
+                <v-list-item-title
+                  v-text="item.title"
+                  class="overline text-uppercase"
+                ></v-list-item-title>
+              </v-list-item-content>
             </template>
+
             <v-list-item
-              v-for="(service, i) in services"
-              :key="i"
-              link
+              v-for="(dropdown, n) in item.dropdowns"
+              :key="n"
               router
-              :to="{ name: item.link }"
+              :to="dropdown.link"
             >
-              <v-list-item-icon>
-                <v-icon class="ml-1" color="icon" size="15"
-                  >mdi-square-medium</v-icon
-                >
-              </v-list-item-icon>
-              <v-list-item-title
-                class="font--text"
-                v-text="service.title"
-              ></v-list-item-title>
+              <v-list-item-content>
+                <v-list-item-title v-text="dropdown.name"></v-list-item-title>
+              </v-list-item-content>
             </v-list-item>
           </v-list-group>
         </v-list>

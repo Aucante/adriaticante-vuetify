@@ -50,7 +50,7 @@
           >
             <v-card class="d-flex align-center" tile>
               <v-img
-                height="400"
+                height="250"
                 :src="contact.picture"
                 gradient="to top right, rgba(100,115,201,.1), rgba(0,0,0,.7)"
               >
